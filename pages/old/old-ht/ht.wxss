@@ -1,0 +1,15 @@
+.hx-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.ht {
+    position: absolute;
+    width: 100%;
+}
+
+.ht image {
+    width: 100%;
+    display: block;
+}

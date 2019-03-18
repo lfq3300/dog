@@ -1,0 +1,41 @@
+<view class="container">
+    <form bindsubmit="formBindsubmit">
+        <view class="page-section">
+            <navigator class="item-info" url="../goods/goods?id={{result_data.goods_info.goods_id}}">
+                <view>
+                    <image mode="aspectFill" src="{{result_data.goods_info.goods_pic}}"></image>
+                </view>
+                <view class="info-goods">
+                    <view class="goods-name">{{result_data.goods_info.goods_name}}</view>
+                    <view class="goods-money">￥{{result_data.og_goods_price}}</view>
+                </view>
+                <view class="info-number">×{{result_data.og_goods_quantity}}</view>
+            </navigator>
+        </view>
+        <view class="page-section">
+            <view class="comment-title">
+                <text>评论内容</text>
+            </view>
+            <view class="comment-content">
+                <textarea name="comment_content" placeholder="请输入评论内容"></textarea>
+            </view>
+            <view class="comment-pic">
+                <view class="pic-box">
+                    <view class="upload-pic" wx:for="{{photos}}">
+                        <image mode="aspectFill" src="{{item}}"></image>
+                        <cover-view bindtap="removeImage" class="remove-pic" data-id="{{index}}">×</cover-view>
+                    </view>
+                    <view bindtap="bindImageTap" class="upload-btn">
+                        <image mode="aspectFill" src="../../assets/images/upload-icon.png"></image>
+                    </view>
+                </view>
+                <view class="pic-tips">
+                    <text>建议上传图片大小1M以内，最多限制3张图片</text>
+                </view>
+            </view>
+        </view>
+        <view class="page-submit">
+            <button formType="submit" type="warn">提交</button>
+        </view>
+    </form>
+</view>

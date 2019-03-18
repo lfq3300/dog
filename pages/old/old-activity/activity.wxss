@@ -1,0 +1,209 @@
+page {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.page-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.scene1 .btns {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    bottom: 25%;
+    left: 0;
+    text-align: center;
+}
+
+.scene1 .btns image {
+    margin: 0 10rpx;
+    width: 267rpx;
+}
+
+.scene2 .box {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.scene2 .box .photo {
+    width: 711rpx;
+    height: 844rpx;
+    position: relative;
+    margin-left: 30rpx;
+}
+
+.scene2 .box .photo>image {
+    width: 625rpx;
+    height: 815rpx;
+    margin-top: 45rpx;
+    margin-left: 35rpx;
+}
+
+.scene2 .box .photo .kuang {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.scene2 .box .photo .kuang>image {
+    width: 100%;
+    height: 100%;
+}
+
+.scene2 .box .sex {
+    margin-top: 50rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.scene2 .box .sex image {
+    width: 96rpx;
+    height: 96rpx;
+    margin: 0 40rpx;
+}
+
+.scene2 .box .btns {
+    width: 100%;
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+.scene2 .box .btns image {
+    width: 444rpx;
+}
+
+.scene2 .box .btns2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 50rpx;
+}
+
+.scene2 .box .btns2 image {
+    width: 287rpx;
+    margin: 0 20rpx;
+}
+
+.scene2 .box .btns2 text {
+    font-size: 26rpx;
+    text-align: center;
+    color: #4aa981;
+    display: block;
+    margin-top: 15rpx;
+}
+
+.scene2 form {
+    width: 610rpx;
+    margin: auto;
+    position: relative;
+    display: block;
+    margin-bottom: 30rpx;
+}
+
+.scene2 form input {
+    width: 500rpx;
+    height: 66rpx;
+    color: #76d1ec;
+    text-align: left;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+    border: 1px solid #76d1ec;
+    background: #fff;
+    border-bottom-left-radius: 34rpx;
+    border-top-left-radius: 34rpx;
+}
+
+.scene2 .phcolor {
+    color: #76d1ec;
+}
+
+.scene2 form .form-submit {
+    width: 160rpx;
+    height: 66rpx;
+    background: #76d1ec;
+    border-radius: 0rpx;
+    border-bottom-right-radius: 34rpx;
+    border-top-right-radius: 34rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    line-height: 66rpx;
+    font-size: 30rpx;
+    z-index: 1;
+}
+
+.scene2 .danmu {
+    width: 750rpx;
+    position: absolute;
+    top: 0rpx;
+    left: 0rpx;
+}
+
+.scene2 .danmu .dm {
+    position: absolute;
+    height: 68rpx;
+    display: flex;
+    flex-direction: row;
+    border-radius: 22rpx;
+    background-color: rgba(125,125,125,.7);
+    padding: 0 20rpx;
+}
+
+.scene2 .danmu .dm image {
+    width: 45rpx;
+    height: 48rpx;
+    display: block;
+    padding-top: 10rpx;
+    margin-right: 10rpx;
+}
+
+.scene2 .danmu .dm .dm-text {
+    font-size: 40rpx;
+    color: #fff;
+    line-height: 68rpx;
+}
+
+.scene2 .danmu .dm-1 {
+    top: 160rpx;
+    transform: translateX(750);
+}
+
+.scene2 .danmu .dm-2 {
+    top: 260rpx;
+    transform: translateX(750);
+}
+
+.scene2 .danmu .dm-3 {
+    top: 580rpx;
+    transform: translateX(750);
+}
+
+.scene2 .danmu .dm-4 {
+    top: 670rpx;
+    transform: translateX(750);
+}
+
+.scene2 .danmu .dm-5 {
+    top: 760rpx;
+    transform: translateX(750);
+}

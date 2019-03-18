@@ -1,0 +1,272 @@
+page {
+    background-color: #f4f4f4;
+}
+
+image {
+    display: block;
+}
+
+.page-section {
+    width: 100%;
+    padding-bottom: 90rpx;
+    overflow: hidden;
+}
+
+.page-section checkbox-group {
+    width: 100%;
+}
+
+.page-section checkbox-group .view_label {
+    width: 910rpx;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1rpx solid #e8e8e8;
+    background-color: #fff;
+}
+
+.page-section checkbox-group .view_label .section-checkbox {
+    width: 100rpx;
+    height: 245rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10rpx;
+}
+
+.page-section checkbox-group .view_label .section-checkbox checkbox {
+    transform: scale(0.8);
+}
+
+.page-section checkbox-group .view_label .section-pic {
+    width: 185rpx;
+    height: 185rpx;
+    padding: 30rpx 0;
+}
+
+.page-section checkbox-group .view_label .section-pic image {
+    width: 100%;
+    height: 100%;
+}
+
+.page-section checkbox-group .view_label .section-goods {
+    font-size: 28rpx;
+    color: #333;
+    width: 420rpx;
+    padding: 30rpx 20rpx;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-name {
+    position: relative;
+    padding-right: 50rpx;
+    line-height: 50rpx;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-name .icon-box {
+    width: 70rpx;
+    height: 245rpx;
+    position: absolute;
+    right: -20rpx;
+    top: -30rpx;
+    overflow: hidden;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-name .icon {
+    height: 8px;
+    width: 8px;
+    border-width: 2px 2px 0 0;
+    border-color: #c7c7cc;
+    border-style: solid;
+    transform: matrix(.71,.71,-.71,.71,0,0);
+    position: absolute;
+    right: 40rpx;
+    top: 46rpx;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-money {
+    font-size: 32rpx;
+    line-height: 65rpx;
+    font-weight: 500;
+    margin-bottom: 15rpx;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-money text {
+    color: #ccc;
+    font-size: 24rpx;
+    padding: 0 4rpx;
+    text-decoration: line-through;
+    margin-left: 10rpx;
+}
+
+.page-section checkbox-group .view_label .section-del {
+    width: 150rpx;
+    text-align: center;
+    background-color: #f41c24;
+    line-height: 245rpx;
+    color: #fff;
+    font-size: 28rpx;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item {
+    height: 50rpx;
+    text-align: left;
+    border: 1px solid #d8d8d8;
+    border-radius: 10rpx;
+    width: 205rpx;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item>view,.page-section checkbox-group .view_label .section-goods .goods-quantity .item>navigator {
+    float: left;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item>view.item-jian {
+    width: 60rpx;
+    height: 50rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #d8d8d8;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item>view.item-jian .icon1 {
+    width: 25rpx;
+    height: 5rpx;
+    background-color: #666;
+    display: table;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item .item-input {
+    width: 80rpx;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item .item-input input {
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: #333;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item>view.item-jia {
+    width: 60rpx;
+    height: 50rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-left: 1px solid #d8d8d8;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item>view.item-jia .icon1 {
+    width: 25rpx;
+    height: 5rpx;
+    background-color: #666;
+    display: table;
+}
+
+.page-section checkbox-group .view_label .section-goods .goods-quantity .item>view.item-jia .icon2 {
+    width: 5rpx;
+    height: 25rpx;
+    background-color: #666;
+    display: table;
+    position: absolute;
+    top: 15rpx;
+}
+
+.page-footer {
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    border-top: 1rpx solid #e8e8e8;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.page-footer .footer-submit {
+    width: 230rpx;
+    height: 100%;
+    background-color: #f41c24;
+    text-align: center;
+    line-height: 90rpx;
+    color: #fff;
+    float: right;
+    border-radius: 0rpx;
+}
+
+.page-footer .footer-money {
+    padding-right: 25rpx;
+    height: 100%;
+    text-align: center;
+    color: #666;
+    float: right;
+    text-align: right;
+    font-size: 26rpx;
+}
+
+.page-footer .footer-money .money-total {
+    padding-top: 16rpx;
+    line-height: 35rpx;
+    font-weight: 500;
+}
+
+.page-footer .footer-money .money-total .price {
+    font-size: 32rpx;
+    color: #f41c24;
+}
+
+.page-footer .footer-money .money-ex {
+    line-height: 20rpx;
+    font-size: 20rpx;
+}
+
+.page-footer .footer-checkbox {
+    float: left;
+    font-size: 26rpx;
+    color: #999;
+    line-height: 90rpx;
+    padding-left: 30rpx;
+}
+
+.page-footer .footer-checkbox checkbox {
+    transform: scale(0.8);
+}
+
+.page-nodata {
+    width: 100%;
+    margin-top: 130rpx;
+    text-align: center;
+}
+
+.page-nodata image {
+    width: 154rpx;
+    display: block;
+    margin: auto;
+}
+
+.page-nodata text {
+    display: inline-block;
+}
+
+.page-nodata text.text {
+    padding-top: 30rpx;
+    font-size: 26rpx;
+    color: #999;
+    display: block;
+    text-align: center;
+}
+
+.page-nodata text.btn-home {
+    width: 230rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    border: 1px solid #f41c24;
+    border-radius: 35rpx;
+    color: #f41c24;
+    font-size: 26rpx;
+    text-align: center;
+    margin-top: 25rpx;
+}

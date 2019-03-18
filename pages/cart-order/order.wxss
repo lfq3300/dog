@@ -1,0 +1,525 @@
+page {
+    background-color: #f4f4f4;
+}
+
+image {
+    display: block;
+}
+
+.page-section {
+    width: 100%;
+    padding-bottom: 110rpx;
+}
+
+.page-section .section-add {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 30rpx;
+    position: relative;
+}
+
+.page-section .section-add .add-address {
+    text-align: center;
+    font-size: 28rpx;
+    color: #999;
+    padding-bottom: 30rpx;
+    position: relative;
+}
+
+.page-section .section-add .add-address button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page-section .section-add .add-head {
+    font-size: 30rpx;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    padding-left: 30rpx;
+    padding-right: 80rpx;
+    font-weight: 500;
+}
+
+.page-section .section-add .add-head view {
+    width: 100%;
+    line-height: 50rpx;
+}
+
+.page-section .section-add .add-head view.tel {
+    text-align: right;
+}
+
+.page-section .section-add .add-details {
+    padding: 10rpx 80rpx 30rpx 30rpx;
+    border-bottom: 1rpx solid #e8e8e8;
+    font-size: 26rpx;
+    color: #666666;
+}
+
+.page-section .section-add .icon {
+    height: 8px;
+    width: 8px;
+    border-width: 3px 3px 0 0;
+    border-color: #c7c7cc;
+    border-style: solid;
+    transform: matrix(.71,.71,-.71,.71,0,0) translateY(-50%);
+    position: absolute;
+    right: 35rpx;
+    top: 50%;
+}
+
+.page-section .section-add image {
+    width: 100%;
+    height: 12rpx;
+}
+
+.section-item {
+}
+
+.section-item .item-info {
+    padding: 30rpx;
+    font-size: 28rpx;
+    color: #333;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.section-item .item-info image {
+    width: 180rpx;
+    height: 180rpx;
+    display: block;
+}
+
+.section-item .item-info .info-goods {
+    width: 100%;
+    padding-right: 20rpx;
+    padding-left: 20rpx;
+}
+
+.section-item .item-info .info-goods .goods-name {
+    line-height: 40rpx;
+    margin-bottom: 10rpx;
+}
+
+.section-item .item-info .info-goods .goods-money {
+    font-size: 32rpx;
+    color: #666;
+}
+
+.section-item .item-info .info-goods .goods-money text {
+    color: #ccc;
+    font-size: 24rpx;
+    padding: 0 4rpx;
+    text-decoration: line-through;
+    margin-left: 10rpx;
+}
+
+.section-item .item-info .info-goods .goods-promotion {
+    font-size: 30rpx;
+    color: #666;
+    padding-top: 15rpx;
+}
+
+.section-item .item-info .info-goods .goods-promotion .promotion-li {
+    font-size: 22rpx;
+    padding: 0rpx;
+    border-bottom: none;
+    align-items: center;
+}
+
+.section-item .item-info .info-goods .goods-promotion .promotion-li text {
+    padding: 5rpx 10rpx;
+    display: inline-block;
+    color: #fff;
+    background-color: #f41c24;
+    border-radius: 10rpx;
+    font-size: 20rpx;
+    margin: 5rpx 0;
+    margin-right: 10rpx;
+}
+
+.section-item .item-info .info-number {
+    font-size: 26rpx;
+    color: #bbb;
+}
+
+.promotion {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.promotion .icon {
+    height: 16rpx;
+    width: 16rpx;
+    border-width: 6rpx 6rpx 0 0;
+    border-color: #c7c7cc;
+    border-style: solid;
+    transform: matrix(.71,.71,-.71,.71,0,0) translateY(-50%);
+    position: absolute;
+    right: 35rpx;
+    top: 50%;
+    margin-top: -6rpx;
+}
+
+.promotion .promotion-li {
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    border-bottom: 1rpx solid #e8e8e8;
+}
+
+.promotion .name {
+    font-size: 28rpx;
+    color: #333;
+    padding-right: 30rpx;
+    width: 300rpx;
+    line-height: 90rpx;
+}
+
+.promotion .item {
+    width: 100%;
+    text-align: right;
+    font-size: 26rpx;
+    margin-right: 30rpx;
+    color: #f41c24;
+    line-height: 40rpx;
+    padding: 25rpx 0;
+}
+
+.promotion .promotion-li .item-default {
+    color: #c7c7cc;
+}
+
+.promotion .discount .item {
+    margin-right: 0rpx;
+}
+
+.promotion .ticket .item {
+    color: #c7c7cc;
+}
+
+.promotion .express .item {
+    color: #333;
+    margin-right: 0rpx;
+}
+
+.promotion .clear-border {
+    border-bottom: none;
+}
+
+.section-price {
+    background-color: #fff;
+    padding-top: 30rpx;
+}
+
+.section-price .price-li {
+    font-size: 28rpx;
+    color: #333;
+    overflow: hidden;
+    line-height: 50rpx;
+    padding: 0 30rpx;
+}
+
+.section-price .price-li text.li-number {
+    float: right;
+    font-size: 30rpx;
+    color: #f41c24;
+}
+
+.section-price .price-total {
+    margin-top: 30rpx;
+    padding: 0 30rpx;
+    font-size: 28rpx;
+    color: #333;
+    line-height: 90rpx;
+    height: 90rpx;
+    border-top: 1rpx solid #e8e8e8;
+    text-align: right;
+}
+
+.section-price .price-total text {
+    font-size: 32rpx;
+    color: #f41c24;
+}
+
+.page-footer {
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    border-top: 1rpx solid #e8e8e8;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.page-footer .footer-submit {
+    width: 230rpx;
+    height: 100%;
+    background-color: #f41c24;
+    text-align: center;
+    line-height: 90rpx;
+    color: #fff;
+    float: right;
+    border-radius: 0rpx;
+}
+
+.page-footer .footer-money {
+    padding-right: 25rpx;
+    height: 100%;
+    text-align: center;
+    color: #666;
+    float: right;
+    font-size: 30rpx;
+}
+
+.page-footer .footer-money .money-total {
+    line-height: 90rpx;
+    font-weight: 500;
+}
+
+.page-footer .footer-money .money-total .price {
+    font-size: 36rpx;
+    color: #f41c24;
+}
+
+.fixed-coupon {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.fixed-coupon .coupon-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.fixed-coupon .coupon-body {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -580rpx;
+    background-color: #fff;
+}
+
+.fixed-coupon .coupon-body .coupon-title {
+    font-size: 32rpx;
+    color: #333;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    position: relative;
+}
+
+.fixed-coupon .coupon-body .coupon-title icon {
+    position: absolute;
+    right: 30rpx;
+    top: 25rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-item {
+    padding: 30rpx 20rpx;
+    box-sizing: border-box;
+    height: 490rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-item .no-data {
+    text-align: center;
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+    color: #999;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item {
+    width: 100%;
+    height: 200rpx;
+    border: 1rpx solid #f41c24;
+    border-radius: 10rpx;
+    color: #f41c24;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 20rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-money {
+    margin-left: 20rpx;
+    margin-top: 25rpx;
+    float: left;
+    width: 255rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-money .money-code {
+    font-size: 50rpx;
+    font-weight: 500;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-money .money-amount {
+    font-size: 116rpx;
+    font-weight: 500;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-tips {
+    height: 100%;
+    float: left;
+    margin-left: 15rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-tips .tips-t {
+    font-size: 32rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-top: 60rpx;
+    margin-bottom: 10rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-tips .tips-c {
+    border: 1px solid #f41c24;
+    font-size: 18rpx;
+    padding: 0rpx 15rpx;
+    line-height: 24rpx;
+    display: table;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-btn {
+    position: absolute;
+    right: 25rpx;
+    top: 35rpx;
+    border-left: 1px #f41c24 dashed;
+    padding-left: 25rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-btn .btn {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: #f41c24;
+    border-radius: 50rpx;
+    color: #fff;
+    font-size: 28rpx;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 32rpx;
+    text-align: center;
+    margin: auto;
+    padding-right: 14rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-btn .btn .btn-icon {
+    height: 8px;
+    width: 8px;
+    border-width: 2px 2px 0 0;
+    border-color: #fff;
+    border-style: solid;
+    transform: matrix(.71,.71,-.71,.71,0,0);
+    position: absolute;
+    right: 12rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-item .item .item-btn>text {
+    font-size: 18rpx;
+    display: block;
+    margin-top: 15rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-code {
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    padding: 15rpx 40rpx;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+}
+
+.fixed-coupon .coupon-body .coupon-code input {
+    width: 450rpx;
+    font-size: 28rpx;
+    color: #999;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.fixed-coupon .coupon-body .coupon-code button {
+    background-color: #999;
+    text-align: center;
+    line-height: 50rpx;
+    height: 50rpx;
+    color: #fff;
+    font-size: 28rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 40rpx;
+    border-radius: 10rpx;
+    z-index: 5;
+}
+
+.fixed-coupon .coupon-body .coupon-code .submit_red {
+    background-color: #f41c24;
+}
+
+.page-msg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+    z-index: 10;
+}
+
+.page-msg .msg-box {
+    width: 500rpx;
+    background: #fff;
+    border-radius: 10rpx;
+}
+
+.page-msg .msg-box .box-text {
+    font-size: 32rpx;
+    color: #999;
+    padding: 35rpx;
+}
+
+.page-msg .msg-box .btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.page-msg .msg-box .btns text {
+    border-top: 1px solid #ccc;
+    width: 50%;
+    text-align: center;
+    line-height: 90rpx;
+    font-size: 35rpx;
+    color: #666;
+}
+
+.page-msg .msg-box .btns .open_setting {
+    border-right: 1px solid #ccc;
+}

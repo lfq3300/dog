@@ -1,0 +1,72 @@
+page {
+    background-color: #f4f4f4;
+    height: 100%;
+}
+
+image {
+    display: block;
+}
+
+.settings-head {
+    width: 100%;
+    height: 270rpx;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-head .logo {
+    width: 177rpx;
+    height: 97rpx;
+}
+
+.page-section {
+    width: 100%;
+}
+
+.section-group {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.section-group .group-item {
+}
+
+.section-group .group-item .item-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 30rpx;
+    color: #333;
+    font-weight: 500;
+    padding: 30rpx;
+    position: relative;
+}
+
+.section-group .group-item .item-title .icon {
+    height: 8px;
+    width: 8px;
+    border-width: 3px 3px 0 0;
+    border-color: #c7c7cc;
+    border-style: solid;
+    transform: matrix(.71,.71,-.71,.71,0,0);
+    position: absolute;
+    right: 30rpx;
+    top: 40rpx;
+}
+
+.section-group .bottom-line {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.section-group .group-item button {
+    position: absolute;
+    top: 0rpx;
+    left: 0rpx;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}

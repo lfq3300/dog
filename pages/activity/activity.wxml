@@ -1,0 +1,109 @@
+<view class="container">
+    <view class="page-head">
+        <view class="banner" wx:if="{{result.activity_pic}}">
+            <image mode="widthFix" src="{{result.activity_pic}}"></image>
+        </view>
+        <view class="timer">
+            <view class="title">抢购中 先下单先得哦</view>
+            <view class="time" hidden="{{as_time>0?false:true}}">
+        距结束
+        <text>{{end_h}}</text> :
+        <text>{{end_i}}</text> :
+        <text>{{end_s}}</text>
+            </view>
+            <view class="time" hidden="{{as_time==-1?false:true}}">
+        活动即将开始
+        <text>00</text> :
+        <text>00</text> :
+        <text>00</text>
+            </view>
+            <view class="time" hidden="{{as_time==-2?false:true}}">
+        活动结束
+        <text>00</text> :
+        <text>00</text> :
+        <text>00</text>
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="theme" hidden="{{result.activity_tpl==0?false:true}}">
+            <view class="hot-goods" wx:if="{{result.hot_goods.length}}">
+                <swiper autoplay="true" circular="true" displayMultipleItems="1" indicatorActiveColor="#f41c24" indicatorColor="#cacad0" indicatorDots="true">
+                    <swiper-item wx:for="{{result.hot_goods}}" wx:for-item="item_goods">
+                        <navigator class="goods-item" url="../goods/goods?id={{item.goods_id}}" wx:for="{{item_goods}}">
+                            <image mode="widthFix" src="{{item.goods_pic}}"></image>
+                            <view class="item-name">{{item.goods_name}}</view>
+                            <view class="item-price">￥{{item.as_price}}
+                <text>￥{{item.goods_price}}</text>
+                            </view>
+                        </navigator>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view class="ads" wx:if="{{result.ad.length}}">
+                <navigator url="{{item.as_ad_path}}" wx:for="{{result.ad}}">
+                    <image mode="widthFix" src="{{item.ad_pic}}"></image>
+                </navigator>
+            </view>
+            <view class="list-goods" wx:if="{{result.goods.length}}">
+                <view class="goods-item" wx:for="{{result.goods}}">
+                    <navigator url="../goods/goods?id={{item.goods_id}}">
+                        <image mode="widthFix" src="{{item.goods_pic}}"></image>
+                    </navigator>
+                    <view class="item-footer">
+                        <view class="item-label">
+                            <text wx:for="{{item.as_promotion}}" wx:for-item="item_promotion">{{item_promotion.promotion_name}}</text>
+                            <text wx:if="{{item.as_coupon.length}}">满减</text>
+                        </view>
+                        <view class="item-name">{{item.goods_name}}</view>
+                        <view class="item-price">￥{{item.as_price}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="theme" hidden="{{result.activity_tpl==1?false:true}}">
+            <view class="list-goods-2">
+                <navigator class="goods-item" url="">
+                    <view class="item-pic">
+                        <image mode="widthFix" src="https://wx.xgdq.com/upload/pic/855170_1532509728.jpg"></image>
+                    </view>
+                    <view class="item-right">
+                        <view class="item-name">
+              除螨大功率吸尘器
+              <text>1700w大功率，德系做工，轻音低噪</text>
+                        </view>
+                        <view class="item-label">
+                            <text>立省500元</text>
+                            <text>满减</text>
+                        </view>
+                        <view class="item-price">￥2011</view>
+                        <view class="item-price1">￥4011</view>
+                        <view class="item-btn">去抢购</view>
+                    </view>
+                </navigator>
+                <navigator class="goods-item" url="">
+                    <view class="item-pic">
+                        <image mode="widthFix" src="https://wx.xgdq.com/upload/pic/855170_1532509728.jpg"></image>
+                    </view>
+                    <view class="item-right">
+                        <view class="item-name">
+              除螨大功率吸尘器
+              <text>1700w大功率，德系做工，轻音低噪</text>
+                        </view>
+                        <view class="item-label">
+                            <text>立省500元</text>
+                            <text>满减</text>
+                        </view>
+                        <view class="item-price">￥2011</view>
+                        <view class="item-price1">￥4011</view>
+                        <view class="item-btn">去抢购</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="goods-load">
+        <view class="load-line"></view>
+        <view class="load-text">更多内容，敬请期待</view>
+    </view>
+</view>

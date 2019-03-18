@@ -1,0 +1,47 @@
+<view class="container">
+    <view class="coupon-tab">
+        <view bindtap="onOrderTab" class="{{item.cls}}" data-id="{{index}}" wx:for="{{tabs}}">
+            <text>{{item.tab}}</text>
+        </view>
+    </view>
+    <view class="page-section" wx:if="{{result_data.length}}">
+        <view class="section-item" wx:for="{{result_data}}">
+            <navigator class="item-head">
+                <text class="head_number">交易单号 {{item.order_no}}</text>
+                <text class="head_state" wx:if="{{item.order_code==1000}}">待审核</text>
+                <text class="head_state code_cancel" wx:if="{{item.order_code==1001}}">已取消</text>
+                <text class="head_state" wx:if="{{item.order_code==1010}}">待付款</text>
+                <text class="head_state" wx:if="{{item.order_code==1020}}">待发货</text>
+                <text class="head_state" wx:if="{{item.order_code==1021}}">已发货</text>
+                <text class="head_state code_success" wx:if="{{item.order_code==1022}}">已完成</text>
+            </navigator>
+            <view class="item-info" wx:for="{{item.goods_list}}" wx:for-item="goods_item">
+                <navigator url="../goods/goods?id={{goods_item.og_goods_id}}">
+                    <image mode="aspectFill" src="{{goods_item.goods.goods_pic}}"></image>
+                </navigator>
+                <view class="info-goods">
+                    <navigator class="goods-name" url="../goods/goods?id={{goods_item.og_goods_id}}">{{goods_item.goods.goods_name}}</navigator>
+                    <view class="goods-money">￥{{goods_item.og_goods_price}}</view>
+                    <navigator class="btn-comment" url="../user-comment/comment?goods_id={{goods_item.og_goods_id}}&order_id={{goods_item.og_order_id}}" wx:if="{{item.order_code==1022&&goods_item.og_goods_comment==0}}">评价</navigator>
+                </view>
+                <view class="info-number">×{{goods_item.og_goods_quantity}}</view>
+            </view>
+            <view class="item-footer">
+                <view class="footer-total">
+          共{{item.order_quantity}}件商品 小计：￥{{item.total_fee}}
+        </view>
+                <view class="footer-btn_del">
+                    <text bindtap="order_pay" class="btn-pay" data-order_id="{{item.order_id}}" wx:if="{{item.order_code==1010}}">立即支付</text>
+                    <text bindtap="order_confirm" class="btn-pay" data-order_id="{{item.order_id}}" wx:if="{{item.order_code==1021}}">确认收货</text>
+                    <text bindtap="order_cancel" data-order_id="{{item.order_id}}" wx:if="{{item.order_code==1000||item.order_code==1010}}">取消订单</text>
+                    <text bindtap="order_return" data-order_id="{{item.order_id}}" wx:if="{{item.order_code==1022&&item.order_return==0}}">申请售后</text>
+                    <text bindtap="order_del" data-order_id="{{item.order_id}}" wx:if="{{item.order_code==1010||item.order_code==1022||item.order_code==1000||item.order_code==1001}}">删除订单</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page-nodata" wx:else>
+        <image mode="widthFix" src="../../assets/images/nodata-icon.png"></image>
+        <text>亲，还没有相关订单哦~</text>
+    </view>
+</view>

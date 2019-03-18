@@ -1,0 +1,8 @@
+.page-section {
+    width: 100%;
+}
+
+.page-section image {
+    width: 100%;
+    display: block;
+}

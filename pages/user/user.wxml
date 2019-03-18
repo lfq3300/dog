@@ -1,0 +1,89 @@
+<view class="container">
+    <view class="user-head">
+        <image class="user-head-bg" mode="aspectFill" src="../../assets/images/user-head-bg.png"></image>
+        <view class="user-info">
+            <block wx:if="{{userinfo}}">
+                <image backgroundSize="cover" class="info-face" src="{{userinfo.avatarUrl}}"></image>
+                <text class="info-nickname">{{userinfo.nickName}}</text>
+            </block>
+            <button bindgetuserinfo="bindGetUserInfo" openType="getUserInfo" wx:else>授权登录</button>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="section-group">
+            <view class="group-item">
+                <navigator class="item-title" url="../user-order/order?act=order_all">
+                    <image mode="widthFix" src="../../assets/images/user-icon1.png"></image>
+                    <text>我的订单</text>
+                    <view class="icon"></view>
+                </navigator>
+                <view class="item-btns">
+                    <navigator class="btn" hoverClass="none" url="../user-order/order?act=no_pay">
+                        <image mode="aspectFit" src="../../assets/images/user-icon1-1.png"></image>
+                        <text>待付款</text>
+                    </navigator>
+                    <navigator class="btn" hoverClass="none" url="../user-order/order?act=no_express">
+                        <image mode="aspectFit" src="../../assets/images/user-icon1-2.png"></image>
+                        <text>待发货</text>
+                    </navigator>
+                    <navigator class="btn" hoverClass="none" url="../user-order/order?act=no_sh">
+                        <image mode="aspectFit" src="../../assets/images/user-icon1-3.png"></image>
+                        <text>待收货</text>
+                    </navigator>
+                    <navigator class="btn" hoverClass="none" url="../user-order/order?act=no_pj">
+                        <image mode="aspectFit" src="../../assets/images/user-icon1-4.png"></image>
+                        <text>待评价</text>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <view class="section-group">
+            <view class="group-item bottom-line">
+                <navigator class="item-title" url="../user-after-sale/after-sale">
+                    <image mode="widthFix" src="../../assets/images/user-icon2.png"></image>
+                    <text>退货\售后</text>
+                    <view class="icon"></view>
+                </navigator>
+            </view>
+            <view class="group-item bottom-line">
+                <navigator class="item-title" url="../user-coupon/coupon">
+                    <image mode="widthFix" src="../../assets/images/user-icon3.png"></image>
+                    <text>优惠券\优惠码</text>
+                    <view class="icon"></view>
+                </navigator>
+            </view>
+            <view bindtap="selectAddress" class="group-item bottom-line">
+                <view class="item-title">
+                    <image mode="widthFix" src="../../assets/images/user-icon4.png"></image>
+                    <text>地址管理</text>
+                    <view class="icon"></view>
+                </view>
+            </view>
+            <view class="group-item">
+                <navigator class="item-title" url="user-company/company">
+                    <image mode="widthFix" src="../../assets/images/user-icon6.png"></image>
+                    <text>公司简介</text>
+                    <view class="icon"></view>
+                </navigator>
+            </view>
+        </view>
+        <view class="section-group">
+            <view class="group-item">
+                <navigator class="item-title" url="user-settings/settings">
+                    <image mode="widthFix" src="../../assets/images/user-icon5.png"></image>
+                    <text>设置</text>
+                    <view class="icon"></view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="page-msg" wx:if="{{is_address_show}}">
+        <view class="msg-box">
+            <view class="box-text">检测到您没打开通讯地址权限，是否去设置打开？</view>
+            <view class="btns">
+                <text bindtap="open_setting" class="open_setting">立即设置</text>
+                <text bindtap="hide_msg">取消</text>
+            </view>
+        </view>
+    </view>
+</view>

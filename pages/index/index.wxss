@@ -1,0 +1,428 @@
+page {
+    background-color: #f4f4f4;
+}
+
+image {
+    display: block;
+}
+
+.head {
+    width: 100%;
+    height: 400rpx;
+    position: relative;
+}
+
+.head swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.head swiper image {
+    width: 100%;
+    height: 100%;
+}
+
+.head swiper video {
+    width: 100%;
+    height: 100%;
+}
+
+.head .search {
+    width: 100%;
+    height: 125rpx;
+    position: absolute;
+    top: 30rpx;
+    left: 0rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head .search .search-input {
+    font-size: 26rpx;
+    color: #999;
+    width: 690rpx;
+    height: 60rpx;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 30rpx;
+    line-height: 60rpx;
+}
+
+.head .search .search-input icon {
+    margin: 16rpx 8rpx 0 25rpx;
+    float: left;
+}
+
+.activity_ad {
+    width: 100%;
+    padding: 20rpx 20rpx 0rpx 20rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.activity_ad navigator {
+    margin-top: 20rpx;
+}
+
+.activity_ad image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hot_day {
+    width: 100%;
+    padding: 40rpx 20rpx 35rpx 20rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.hot_day .title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hot_day .title image {
+    height: 29rpx;
+}
+
+.hot_day .goods-item {
+    width: 100%;
+    height: 410rpx;
+    overflow: hidden;
+    margin-top: 30rpx;
+}
+
+.hot_day .goods-item .item-left {
+    width: 320rpx;
+    float: left;
+}
+
+.hot_day .goods-item .item-left image {
+    width: 100%;
+    height: 410rpx;
+}
+
+.hot_day .goods-item .item-right {
+    width: 380rpx;
+    margin-left: 10rpx;
+    float: left;
+}
+
+.hot_day .goods-item .item-right image {
+    width: 100%;
+    height: 200rpx;
+    margin-bottom: 10rpx;
+}
+
+.coupon {
+    width: 100%;
+    padding: 30rpx 20rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.coupon .title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coupon .title image {
+    height: 29rpx;
+}
+
+.coupon .title .more {
+    position: absolute;
+    right: 35rpx;
+    top: 35rpx;
+}
+
+.coupon .title .more image {
+    width: 120rpx;
+}
+
+.coupon .coupon-item {
+    width: 100%;
+    padding-top: 30rpx;
+}
+
+.coupon .coupon-item .item {
+    width: 100%;
+    height: 200rpx;
+    background-color: #f41c24;
+    color: #fff;
+    position: relative;
+}
+
+.coupon .coupon-item .item .item-money {
+    margin-left: 20rpx;
+    margin-top: 25rpx;
+    float: left;
+    width: 255rpx;
+}
+
+.coupon .coupon-item .item .item-money .money-code {
+    font-size: 50rpx;
+    font-weight: 500;
+}
+
+.coupon .coupon-item .item .item-money .money-amount {
+    font-size: 116rpx;
+    font-weight: 500;
+}
+
+.coupon .coupon-item .item .item-tips {
+    height: 100%;
+    float: left;
+    margin-left: 15rpx;
+}
+
+.coupon .coupon-item .item .item-tips .tips-t {
+    font-size: 32rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-top: 60rpx;
+    margin-bottom: 10rpx;
+}
+
+.coupon .coupon-item .item .item-tips .tips-tt {
+    font-size: 36rpx;
+    margin-top: 45rpx;
+    margin-bottom: 0rpx;
+}
+
+.coupon .coupon-item .item .item-tips .tips-tt text {
+    display: block;
+    font-size: 26rpx;
+}
+
+.coupon .coupon-item .item .item-tips .tips-c {
+    border: 1px solid #fff;
+    font-size: 18rpx;
+    padding: 0rpx 15rpx;
+    line-height: 24rpx;
+    display: table;
+}
+
+.coupon .coupon-item .item .item-btn {
+    position: absolute;
+    right: 25rpx;
+    top: 35rpx;
+    border-left: 1px #fff dashed;
+    padding-left: 25rpx;
+}
+
+.coupon .coupon-item .item .item-btn .btn {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: #fff;
+    border-radius: 50rpx;
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 32rpx;
+    text-align: center;
+    margin: auto;
+    padding-right: 14rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.coupon .coupon-item .item .item-btn .btn .btn-icon {
+    height: 8px;
+    width: 8px;
+    border-width: 2px 2px 0 0;
+    border-color: #f41c24;
+    border-style: solid;
+    transform: matrix(.71,.71,-.71,.71,0,0);
+    position: absolute;
+    right: 12rpx;
+}
+
+.coupon .coupon-item .item .item-btn>text {
+    font-size: 18rpx;
+    display: block;
+    margin-top: 15rpx;
+}
+
+.recommend {
+    width: 100%;
+    padding-top: 40rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.recommend .title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recommend .title image {
+    height: 29rpx;
+}
+
+.recommend .goods-item {
+    width: 100%;
+    margin-top: 30rpx;
+}
+
+.recommend .goods-item .item {
+    width: 100%;
+    padding-bottom: 30rpx;
+}
+
+.recommend .goods-item .item image {
+    width: 100%;
+}
+
+.recommend .goods-item .item .item-title {
+    font-size: 30rpx;
+    color: #333;
+    line-height: 45rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    margin-top: 30rpx;
+}
+
+.recommend .goods-item .item .item-describe {
+    font-size: 24rpx;
+    color: #999;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.recommend .goods-item .item .item-money {
+    font-size: 36rpx;
+    color: #f41c24;
+    line-height: 70rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.recommend .goods-item .item .item-money text {
+    color: #ccc;
+    font-size: 24rpx;
+    padding: 0 4rpx;
+    text-decoration: line-through;
+    margin-left: 10rpx;
+}
+
+.new_goods {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 30rpx;
+    padding-top: 30rpx;
+    overflow: hidden;
+}
+
+.new_goods .goods-item {
+    margin-left: 20rpx;
+    width: 345rpx;
+    float: left;
+    margin-bottom: 30rpx;
+}
+
+.new_goods .goods-item image {
+    width: 345rpx;
+    height: 345rpx;
+}
+
+.new_goods .goods-item .item-title {
+    font-size: 26rpx;
+    color: #333;
+    line-height: 40rpx;
+    margin-top: 15rpx;
+}
+
+.new_goods .goods-item .item-money {
+    font-size: 32rpx;
+    color: #f41c24;
+}
+
+.new_goods .goods-item .item-money text {
+    color: #ccc;
+    font-size: 24rpx;
+    padding: 0 4rpx;
+    text-decoration: line-through;
+    margin-left: 10rpx;
+}
+
+.goods-load {
+    width: 100%;
+    padding-bottom: 30rpx;
+    margin-top: 30rpx;
+    position: relative;
+    text-align: center;
+    height: 60rpx;
+}
+
+.goods-load .load-line {
+    width: 60%;
+    margin: auto;
+    height: 30rpx;
+    border-bottom: 1px solid #dddddd;
+}
+
+.goods-load .load-text {
+    color: #999;
+    font-size: 24rpx;
+    line-height: 60rpx;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 0;
+    padding: 0 20rpx;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.popup_ad {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+}
+
+.popup_ad .ad_body {
+    width: 600rpx;
+    position: relative;
+    margin: auto;
+}
+
+.popup_ad .ad_body>image {
+    width: 600rpx;
+    display: block;
+}
+
+.popup_ad .ad_body .ad_close {
+    position: absolute;
+    top: -80rpx;
+    right: 0rpx;
+}
+
+.popup_ad .ad_body .ad_close image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.popup_ad .ad_body .popup_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: none;
+}

@@ -1,0 +1,61 @@
+<view class="container" wx:if="{{result_data}}">
+    <view class="page-line"></view>
+    <view class="page-section" wx:if="{{result_data.result.length}}">
+        <checkbox-group>
+            <view animation="{{item_anim[item.cart_id]}}" capture-bind:touchend="itemEnd" capture-bind:touchstart="itemStart" class="view_label" data-id="{{item.cart_id}}" wx:for="{{result_data.result}}" wx:key="{{item.cart_id}}">
+                <label bindtap="radioChange" class="section-checkbox" data-cart_id="{{item.cart_id}}">
+                    <checkbox checked="{{item.cart_goods_state}}" color="#f41c24" value="{{item.cart_id}}"></checkbox>
+                </label>
+                <navigator class="section-pic" url="/pages/goods/goods?id={{item.cart_goods_id}}">
+                    <image mode="aspectFill" src="{{item.goods.goods_pic}}"></image>
+                </navigator>
+                <view class="section-goods">
+                    <navigator class="goods-name" url="/pages/goods/goods?id={{item.cart_goods_id}}">
+              {{item.goods.goods_name}}
+              <view capture-catch:touchstart="bind_isRemove" class="icon-box" data-id="{{item.cart_id}}">
+                            <text class="icon" data-id="{{item.cart_id}}"></text>
+                        </view>
+                    </navigator>
+                    <view class="goods-money" wx:if="{{item.goods.as_price>0}}">￥{{item.goods.as_price}}<text>￥{{item.goods.goods_price}}</text>
+                    </view>
+                    <view class="goods-money" wx:else>￥{{item.goods.goods_price}}</view>
+                    <view class="goods-quantity">
+                        <view class="item">
+                            <view catchtap="quantity_reduce" class="item-jian" data-cart_id="{{item.cart_id}}">
+                                <text class="icon1"></text>
+                            </view>
+                            <view class="item-input">
+                                <input bindblur="quantity_input" data-cart_id="{{item.cart_id}}" type="number" value="{{item.cart_goods_quantity}}"></input>
+                            </view>
+                            <view catchtap="quantity_plus" class="item-jia" data-cart_id="{{item.cart_id}}">
+                                <text class="icon1"></text>
+                                <text class="icon2"></text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view capture-catch:touchstart="goods_del" class="section-del" data-id="{{item.cart_id}}">
+            删除
+          </view>
+            </view>
+        </checkbox-group>
+    </view>
+    <view class="page-footer" wx:if="{{result_data.result.length}}">
+        <label bindtap="allChange" class="footer-checkbox">
+            <checkbox checked="{{check_all}}" color="#f41c24" value="all"></checkbox>
+      全选({{result_data.select_quantity}})
+    </label>
+        <button bindgetuserinfo="bindGetUserInfo" class="footer-submit" openType="getUserInfo" type="warn">去结算</button>
+        <view class="footer-money">
+            <view class="money-total">
+        合计：<text class="price">￥{{result_data.total_price}}</text>
+            </view>
+            <view class="money-ex">含运费</view>
+        </view>
+    </view>
+    <view class="page-nodata" wx:else>
+        <image mode="widthFix" src="../../assets/images/nodata-cart-icon.png"></image>
+        <text class="text">还是空的，去挑选喜欢的商品吧~</text>
+        <text bindtap="to_category" class="btn-home">去逛逛</text>
+    </view>
+</view>

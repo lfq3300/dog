@@ -1,0 +1,82 @@
+<view class="container">
+    <view class="page-line"></view>
+    <view class="page-section">
+        <view class="section-ul">
+            <view class="section-li">
+                <view class="li-h">
+                    <view>魏海迪</view>
+                    <view class="tel">18688859995</view>
+                </view>
+                <view class="li-address">
+          北京市朝阳区建国路88号SOHO现代城D座22806
+        </view>
+                <view class="li-panel">
+                    <label class="panel-checkbox">
+                        <checkbox checked="" color="#f41c24" value="1"></checkbox>
+            选为默认地址
+          </label>
+                    <view class="panel-btns">
+                        <view class="btn-edit">
+                            <image mode="widthFix" src="../../assets/images/user-icon1.png"></image>
+                            <text>编辑</text>
+                        </view>
+                        <view class="btn-del">
+                            <image mode="widthFix" src="../../assets/images/user-icon1.png"></image>
+                            <text>删除</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="section-li">
+                <view class="li-h">
+                    <view>魏海迪</view>
+                    <view class="tel">18688859995</view>
+                </view>
+                <view class="li-address">
+          北京市朝阳区建国路88号SOHO现代城D座22806
+        </view>
+                <view class="li-panel">
+                    <label class="panel-checkbox">
+                        <checkbox checked="" color="#f41c24" value="1"></checkbox>
+            选为默认地址
+          </label>
+                    <view class="panel-btns">
+                        <view class="btn-edit">
+                            <image mode="widthFix" src="../../assets/images/user-icon1.png"></image>
+                            <text>编辑</text>
+                        </view>
+                        <view class="btn-del">
+                            <image mode="widthFix" src="../../assets/images/user-icon1.png"></image>
+                            <text>删除</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="section-li">
+                <view class="li-h">
+                    <view>魏海迪</view>
+                    <view class="tel">18688859995</view>
+                </view>
+                <view class="li-address">
+          北京市朝阳区建国路88号SOHO现代城D座22806
+        </view>
+                <view class="li-panel">
+                    <label class="panel-checkbox">
+                        <checkbox checked="" color="#f41c24" value="1"></checkbox>
+            选为默认地址
+          </label>
+                    <view class="panel-btns">
+                        <view class="btn-edit">
+                            <image mode="widthFix" src="../../assets/images/user-icon1.png"></image>
+                            <text>编辑</text>
+                        </view>
+                        <view class="btn-del">
+                            <image mode="widthFix" src="../../assets/images/user-icon1.png"></image>
+                            <text>删除</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

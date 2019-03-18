@@ -1,0 +1,6 @@
+<view class="container">
+    <image class="hx-bg" mode="aspectFill" src="../../../assets/images/hx-bg.jpg"></image>
+    <view class="ht">
+        <image mode="widthFix" src="{{ht_img}}"></image>
+    </view>
+</view>

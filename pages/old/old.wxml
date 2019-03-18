@@ -1,0 +1,41 @@
+<view class="container">
+    <view class="page-section">
+        <image mode="widthFix" src="{{item}}" wx:for="{{result.old_content1}}"></image>
+    </view>
+    <view class="page-section">
+        <view class="sec-banner">
+            <swiper autoplay="true" bindanimationfinish="swiper_end" bindchange="swiper_start" circular="true" duration="500" indicatorActiveColor="#e51125" indicatorColor="rgba(0,0,0,.3)" indicatorDots="true" nextMargin="40rpx" previousMargin="40rpx">
+                <swiper-item wx:for="{{result.old_pic}}">
+                    <view class="banner-pic">
+                        <image mode="widthFix" src="{{item}}"></image>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <view animation="{{swiper_anim}}" class="banner-name">
+        {{swiper_text}}
+      </view>
+            <cover-view class="left-box"></cover-view>
+            <cover-view class="right-box"></cover-view>
+        </view>
+    </view>
+    <view class="page-section">
+        <image mode="widthFix" src="{{item}}" wx:for="{{result.old_content2}}"></image>
+    </view>
+    <view class="page-section sec-video-bg">
+        <view class="sec-video">
+            <video poster="https://wx.xgdq.com/upload/mb/video.jpg" src="{{result.old_video}}"></video>
+        </view>
+    </view>
+    <view class="page-section">
+        <image mode="widthFix" src="{{item}}" wx:for="{{result.old_content3}}"></image>
+    </view>
+    <view class="page-section view-zs">
+        <navigator url="old-ht/ht?img={{result.old_contract}}">点击查看“中再生”签约合同详情>></navigator>
+    </view>
+    <view class="page-section view-btn">
+        <navigator class="sec-button" url="old-page/page">
+        立即旧物换新
+        <text>（今日可承接换新数量剩余{{result.old_number}}台）</text>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,87 @@
+page {
+    background-color: #f4f4f4;
+}
+
+image {
+    display: block;
+}
+
+.page-section {
+    width: 100%;
+}
+
+.sec-goods {
+    width: 100%;
+    padding: 0 30rpx;
+    background: #fff;
+    margin-top: 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.sec-goods>navigator {
+    width: 330rpx;
+    margin: 30rpx;
+    margin-left: 0rpx;
+}
+
+.sec-goods image {
+    width: 100%;
+}
+
+.sec-goods .goods_right {
+    width: 100%;
+    position: relative;
+    padding-top: 20rpx;
+    padding-bottom: 30rpx;
+}
+
+.sec-goods .goods_right .gr_coupon {
+    font-size: 22rpx;
+    color: #ef2b2b;
+    background: #fff4ec;
+    padding: 5rpx 10rpx;
+    margin-right: 5rpx;
+}
+
+.sec-goods .goods_right .gr_name {
+    font-size: 28rpx;
+    color: #333333;
+    padding-top: 10rpx;
+}
+
+.sec-goods .goods_right .gr_desc {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.sec-goods .goods_right .gr_price {
+    font-size: 32rpx;
+    color: #f41c24;
+    font-weight: bold;
+}
+
+.sec-goods .goods_right .gr_price1 {
+    font-size: 26rpx;
+    color: #999;
+    margin-top: 10rpx;
+    text-decoration: line-through;
+}
+
+.sec-goods .goods_right .gr_btn {
+    font-size: 26rpx;
+    color: #fff;
+    padding: 15rpx 30rpx;
+    background: #f41c24;
+    border-radius: 45rpx;
+    position: absolute;
+    bottom: 30rpx;
+    right: 0rpx;
+}
+
+.sec-tips {
+    font-size: 24rpx;
+    color: #999;
+    padding: 30rpx;
+}

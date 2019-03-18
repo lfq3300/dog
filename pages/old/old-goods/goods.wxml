@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="page-section">
+        <view class="sec-goods" wx:for="{{result}}">
+            <navigator class="gr_btn" url="/pages/goods/goods?id={{item.goods_id}}">
+                <image mode="widthFix" src="{{item.goods_pic}}"></image>
+            </navigator>
+            <view class="goods_right">
+                <text class="gr_coupon" wx:for="{{item.as_coupon}}" wx:for-item="as_item">{{as_item.coupon_name}}</text>
+                <view class="gr_name">{{item.goods_name}}</view>
+                <view class="gr_desc">{{item.goods_description}}</view>
+                <view class="gr_price1">￥{{item.goods_price}}</view>
+                <view class="gr_price">￥{{item.as_price}}</view>
+                <navigator class="gr_btn" url="/pages/cart-order/order?cart_id={{item.goods_id}}&quantity=1&source=old">立即抵扣</navigator>
+            </view>
+        </view>
+    </view>
+    <view class="sec-tips">
+        <text>注：换新的产品与正价商品享受同等保修；此外，未来如果需要任意部件，将免费寄送到家，以使您的产品寿命得到相应延长。</text>
+    </view>
+</view>

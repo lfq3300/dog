@@ -1,0 +1,108 @@
+page {
+    background-color: #f4f4f4;
+}
+
+image {
+    display: block;
+}
+
+.comment {
+    width: 100%;
+    background-color: #fff;
+}
+
+.comment .item {
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+    padding: 40rpx 30rpx;
+    padding-bottom: 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment .item .item-left {
+    width: 70rpx;
+    height: 70rpx;
+    overflow: hidden;
+    border-radius: 35rpx;
+}
+
+.comment .item .item-left image {
+    width: 100%;
+}
+
+.comment .item .item-right {
+    width: 600rpx;
+    margin-left: 20rpx;
+}
+
+.comment .item .item-right .name {
+    font-size: 26rpx;
+    font-weight: 500;
+    color: #333;
+    line-height: 40rpx;
+    padding-bottom: 10rpx;
+}
+
+.comment .item .item-right .content {
+    font-size: 26rpx;
+    color: #666;
+    line-height: 40rpx;
+    margin-bottom: 20rpx;
+}
+
+.comment .item .item-right .pics {
+    width: 100%;
+    overflow: hidden;
+}
+
+.comment .item .item-right .pics image {
+    width: 180rpx;
+    height: 140rpx;
+    float: left;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.comment .item .item-right .time {
+    width: 100%;
+    margin-bottom: 20rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.comment .item .item-right .reply {
+    width: 100%;
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    color: #666;
+    line-height: 40rpx;
+}
+
+.comment .item .item-right .reply text {
+    color: #f41c24;
+    font-weight: 500;
+}
+
+.page-nodata {
+    width: 100%;
+    text-align: center;
+    padding: 100rpx 0;
+}
+
+.page-nodata image {
+    width: 154rpx;
+    display: block;
+    margin: auto;
+}
+
+.page-nodata text {
+    display: inline-block;
+    padding-top: 30rpx;
+    font-size: 26rpx;
+    color: #999;
+}

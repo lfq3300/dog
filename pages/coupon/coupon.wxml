@@ -1,0 +1,38 @@
+<view class="container">
+    <view class="coupon">
+        <view class="coupon-item">
+            <view bindtap="receive_coupon" class="item" data-id="{{item.coupon_id}}" wx:for="{{result_coupon}}">
+                <view class="item-money">
+                    <text class="money-code">￥</text>
+                    <text class="money-amount">{{item.coupon_rule[1]}}</text>
+                </view>
+                <view class="item-tips">
+                    <block wx:if="{{item.as_goods_one&&item.coupon_rule[0]<=0}}">
+                        <view class="tips-t">{{item.coupon_model}}</view>
+                        <text class="tips-c">{{item.as_coupon_desc}}</text>
+                    </block>
+                    <block wx:elif="{{item.coupon_goods!='all'&&item.coupon_rule[0]<=0}}">
+                        <view class="tips-t">{{item.coupon_model}}</view>
+                        <text class="tips-c">{{item.as_coupon_desc}}</text>
+                    </block>
+                    <block wx:else>
+                        <view class="tips-t">{{item.as_coupon_desc}}</view>
+                        <text class="tips-c">满{{item.coupon_rule[0]}}使用</text>
+                    </block>
+                </view>
+                <view class="item-btn">
+                    <view class="btn">
+                        <text>限量
+领取</text>
+                        <view class="btn-icon"></view>
+                    </view>
+                    <text>有效期至{{item.as_coupon_end_time}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="goods-load">
+            <view class="load-line"></view>
+            <view class="load-text">更多内容，敬请期待</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+page {
+    background-color: #f4f4f4;
+}
+
+.page-section {
+    padding: 30rpx;
+    font-size: 28rpx;
+    line-height: 45rpx;
+    color: #666;
+}

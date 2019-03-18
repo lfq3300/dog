@@ -1,0 +1,191 @@
+page {
+    background-color: #f4f4f4;
+}
+
+image {
+    display: block;
+}
+
+.search {
+    width: 100%;
+    background-color: #fff;
+    font-size: 26rpx;
+    padding: 20rpx 30rpx 40rpx 30rpx;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.search form {
+    width: 100%;
+}
+
+.search .search-box {
+    width: 550rpx;
+    height: 60rpx;
+    background-color: #f4f4f4;
+    border-radius: 30rpx;
+    line-height: 60rpx;
+    padding-right: 20rpx;
+}
+
+.search .search-box icon {
+    margin: 14rpx 8rpx 0 25rpx;
+    float: left;
+}
+
+.search .search-box .phcolor {
+    color: #999;
+}
+
+.search .search-box input {
+    font-size: 26rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+    color: #666;
+}
+
+.search .search-submit {
+    width: 120rpx;
+}
+
+.search .search-submit button {
+    width: 100%;
+    font-size: 30rpx;
+    color: #666;
+    background-color: #fff;
+    padding: 0;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.search .search-submit button::after {
+    border: none;
+}
+
+.search-hot {
+    width: 100%;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    margin-top: 125rpx;
+}
+
+.search-hot .hot-title {
+    font-size: 26rpx;
+    color: #999;
+    padding: 30rpx 0 20rpx 0;
+    line-height: 40rpx;
+    height: 40rpx;
+}
+
+.search-hot .hot-title image {
+    display: inline-block;
+    width: 22rpx;
+    height: 28rpx;
+}
+
+.search-hot .hot-item {
+    width: 100%;
+}
+
+.search-hot .hot-item navigator {
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 30rpx;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 30rpx;
+    font-size: 26rpx;
+    color: #666;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.search-goods {
+}
+
+.search-goods .goods-ul {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 150rpx;
+    overflow: hidden;
+}
+
+.search-goods .goods-item {
+    margin-left: 20rpx;
+    width: 345rpx;
+    float: left;
+    margin-bottom: 30rpx;
+}
+
+.search-goods .goods-item image {
+    width: 345rpx;
+    height: 345rpx;
+}
+
+.search-goods .goods-item .item-title {
+    font-size: 26rpx;
+    color: #333;
+    line-height: 40rpx;
+    margin-top: 15rpx;
+}
+
+.search-goods .goods-item .item-money {
+    font-size: 32rpx;
+    color: #f41c24;
+}
+
+.search-goods .goods-item .item-money text {
+    color: #ccc;
+    font-size: 24rpx;
+    padding: 0 4rpx;
+    text-decoration: line-through;
+    margin-left: 10rpx;
+}
+
+.page-nodata {
+    width: 100%;
+    padding-top: 130rpx;
+    text-align: center;
+    height: 100%;
+}
+
+.page-nodata text {
+    display: inline-block;
+    padding-top: 30rpx;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.goods-load {
+    width: 100%;
+    padding-bottom: 30rpx;
+    margin-top: 30rpx;
+    position: relative;
+    text-align: center;
+    height: 60rpx;
+}
+
+.goods-load .load-line {
+    width: 60%;
+    margin: auto;
+    height: 30rpx;
+    border-bottom: 1px solid #dddddd;
+}
+
+.goods-load .load-text {
+    color: #999;
+    font-size: 24rpx;
+    line-height: 60rpx;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 0;
+    padding: 0 20rpx;
+    transform: translateX(-50%);
+    left: 50%;
+}

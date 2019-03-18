@@ -1,0 +1,43 @@
+<view class="container">
+    <view class="page-section">
+        <view class="sec-msg">
+            <image mode="widthFix" src="../../../assets/images/icon-success.png"></image>
+            <view class="msg-text">
+                提交成功
+                <text>抵扣券已下发到你的个人中心</text>
+            </view>
+        </view>
+    </view>
+    <view class="sec-coupon">
+        <view bindtap="goto_path" class="item" data-path="{{item.as_goods_path}}" wx:for="{{tab_coupons}}">
+            <view class="item-money">
+                <text class="money-code">￥</text>
+                <text class="money-amount">{{item.coupon_rule[1]}}</text>
+            </view>
+            <view class="item-tips">
+                <block wx:if="{{item.as_goods_one&&item.coupon_rule[0]<=0}}">
+                    <view class="tips-t">{{item.coupon_model}}</view>
+                    <text class="tips-c">{{item.as_coupon_desc}}</text>
+                </block>
+                <block wx:elif="{{item.coupon_goods!='all'&&item.coupon_rule[0]<=0}}">
+                    <view class="tips-t">{{item.coupon_model}}</view>
+                    <text class="tips-c">{{item.as_coupon_desc}}</text>
+                </block>
+                <block wx:else>
+                    <view class="tips-t">{{item.as_coupon_desc}}</view>
+                    <text class="tips-c">满{{item.coupon_rule[0]}}使用</text>
+                </block>
+            </view>
+            <view class="item-btn">
+                <view class="btn">
+                    <text>去使用</text>
+                </view>
+                <text>有效期至{{item.as_coupon_end_time}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="goods-load">
+        <view class="load-line"></view>
+        <view class="load-text">更多内容，敬请期待</view>
+    </view>
+</view>

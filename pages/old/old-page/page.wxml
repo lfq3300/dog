@@ -1,0 +1,75 @@
+<form bindsubmit="formBindsubmit" class="container">
+    <view class="page-section">
+        <view class="old-select">
+            <view class="select-title">请选择您要回收的产品</view>
+            <view class="select-item">
+                <text bindtap="cls_change" class="{{item==item_cls_name?'checked':''}}" data-name="{{item}}" hidden="{{index>8?item_hidden:false}}" wx:for="{{item_cls}}">{{item}}</text>
+            </view>
+            <view class="select-input">
+                <input bindinput="inputWacth" name="old_cls_other" placeholder="请输入其他产品名称" type="text" value="{{item_cls_other}}"></input>
+                <text>没有找到自己的产品？请手动输入您的产品类别。</text>
+            </view>
+            <view bindtap="onMore" class="select-more">
+                <block wx:if="{{item_hidden}}">展开更多∨</block>
+                <block wx:else>收起更多∧</block>
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="comment-pic">
+            <view class="pic-tips">
+                <text>上传产品图片(最多3张)</text>
+            </view>
+            <view class="pic-box">
+                <view class="upload-pic" wx:for="{{photos}}">
+                    <image mode="aspectFill" src="{{item}}"></image>
+                    <cover-view bindtap="removeImage" class="remove-pic" data-id="{{index}}">
+                        ×
+                    </cover-view>
+                </view>
+                <view bindtap="bindImageTap" class="upload-btn" wx:if="{{!photos||photos.length<3}}">
+                    <image mode="aspectFill" src="../../../assets/images/upload-icon.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="sec-input">
+            <view class="input-item">
+                <text>姓名</text>
+                <input name="old_name" placeholder="姓名" type="text"></input>
+            </view>
+            <view class="input-item">
+                <text>电话</text>
+                <input name="old_mobile" placeholder="手机或固话" type="number"></input>
+            </view>
+            <view class="input-item">
+                <text>选择地区</text>
+                <picker bindcancel="region_cancel" bindchange="region_change" mode="region" name="old_region" value="{{picker_region_array}}">
+                    <view class="picker">
+                        {{picker_region}}
+                    </view>
+                </picker>
+            </view>
+            <view class="input-item">
+                <text>详细地址</text>
+                <input name="old_address" placeholder="街道门牌信息" type="text"></input>
+            </view>
+            <view class="input-item">
+                <text>上门日期</text>
+                <picker bindcancel="date_cancel" bindchange="date_change" mode="date" name="old_best_date" start="{{current_time}}" value="{{picker_date}}">
+                    <view class="picker">
+                        {{picker_date}}
+                    </view>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="submit">
+            <button formType="submit">提交</button>
+            <text>小狗承诺：为了您的权益，小狗绝不泄露您的个人隐私，请您
+                放心提交；小狗客服将在提交完成后24小时内联系您！</text>
+        </view>
+    </view>
+</form>

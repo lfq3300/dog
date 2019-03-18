@@ -1,0 +1,44 @@
+<view class="container">
+    <form bindsubmit="formBindsubmit">
+        <view class="page-section">
+            <view class="comment-title">
+                <text>请选择服务类型</text>
+            </view>
+            <view class="comment-content">
+                <radio-group name="comment_type">
+                    <label>
+                        <radio checked color="#f41c24" value="1"></radio>退货
+          </label>
+                    <label>
+                        <radio color="#f41c24" value="2"></radio>换货
+          </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="page-section">
+            <view class="comment-title">
+                <text>退货/换货说明</text>
+            </view>
+            <view class="comment-content">
+                <textarea name="comment_content" placeholder="填写退货/换货说明，能快速帮你审核"></textarea>
+            </view>
+            <view class="comment-pic">
+                <view class="pic-box">
+                    <view class="upload-pic" wx:for="{{photos}}">
+                        <image mode="aspectFill" src="{{item}}"></image>
+                        <cover-view bindtap="removeImage" class="remove-pic" data-id="{{index}}">×</cover-view>
+                    </view>
+                    <view bindtap="bindImageTap" class="upload-btn">
+                        <image mode="aspectFill" src="../../assets/images/upload-icon.png"></image>
+                    </view>
+                </view>
+                <view class="pic-tips">
+                    <text>建议上传图片大小1M以内，最多限制3张图片</text>
+                </view>
+            </view>
+        </view>
+        <view class="page-submit">
+            <button formType="submit" type="warn">提交</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,69 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/activity/activity",
+        "pages/old/old",
+        "pages/old/old-ht/ht",
+        "pages/old/old-success/success",
+        "pages/old/old-goods/goods",
+        "pages/old/old-page/page",
+        "pages/old/old-activity/activity",
+        "pages/category/category",
+        "pages/goods/goods",
+        "pages/goods-comment/comment",
+        "pages/coupon/coupon",
+        "pages/cart/cart",
+        "pages/cart-order/order",
+        "pages/user/user",
+        "pages/user/user-company/company",
+        "pages/user/user-settings/settings",
+        "pages/user/user-settings/about/about",
+        "pages/user/user-address/address",
+        "pages/user-coupon/coupon",
+        "pages/user-after-sale/after-sale",
+        "pages/user-order/order",
+        "pages/user-order-return/order-return",
+        "pages/user-comment/comment",
+        "pages/order-after-sale/order",
+        "pages/search/search"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "backgroundColor": "#f4f4f4",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "小狗电器官方商城",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "assets/images/tab-bar-icon1_1.png",
+                "selectedIconPath": "assets/images/tab-bar-icon1_2.png"
+            },
+            {
+                "pagePath": "pages/category/category",
+                "text": "分类",
+                "iconPath": "assets/images/tab-bar-icon2_1.png",
+                "selectedIconPath": "assets/images/tab-bar-icon2_2.png"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "assets/images/tab-bar-icon3_1.png",
+                "selectedIconPath": "assets/images/tab-bar-icon3_2.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "我的",
+                "iconPath": "assets/images/tab-bar-icon4_1.png",
+                "selectedIconPath": "assets/images/tab-bar-icon4_2.png"
+            }
+        ],
+        "color": "#999999",
+        "selectedColor": "#f41c24",
+        "backgroundColor": "#ffffff",
+        "position": "bottom"
+    }
+}

@@ -1,0 +1,124 @@
+<view class="container" wx:if="{{ads}}">
+    <view class="head">
+        <swiper autoplay="true" circular="true" indicatorActiveColor="#f41c24" indicatorColor="#cacad0" indicatorDots="true">
+            <swiper-item wx:for="{{ads.banner}}">
+                <image bindtap="onClickBanner" class="slide-image" data-ad_name="{{item.ad_name}}" data-path="{{item.as_path}}" src="{{item.ad_pic}}"></image>
+            </swiper-item>
+        </swiper>
+        <view class="search">
+            <navigator class="search-input" url="../search/search">
+                <icon color="#999" size="14" type="search"></icon>
+        搜索喜欢的商品
+      </navigator>
+        </view>
+    </view>
+    <view class="activity_ad" wx:if="{{ads.activity.length}}">
+        <navigator url="{{item.as_path}}" wx:for="{{ads.activity}}">
+            <image mode="widthFix" src="{{item.ad_pic}}"></image>
+        </navigator>
+    </view>
+    <view class="hot_day">
+        <view class="title">
+            <image mode="aspectFit" src="../../assets/images/index-baokuan-title.png"></image>
+        </view>
+        <view class="goods-item">
+            <block wx:for="{{ads.hot_left}}">
+                <navigator class="item-left" url="../goods/goods?id={{item.ad_goods}}" wx:if="{{item.ad_goods>0}}">
+                    <image bindtap="bind_zhuge" data-zhuge="{{item.ad_name}}" mode="aspectFill" src="{{item.ad_pic}}"></image>
+                </navigator>
+                <view class="item-left" wx:else>
+                    <image mode="aspectFill" src="{{item.ad_pic}}"></image>
+                </view>
+            </block>
+            <view class="item-right">
+                <block wx:for="{{ads.hot_right}}">
+                    <navigator url="../goods/goods?id={{item.ad_goods}}" wx:if="{{item.ad_goods>0}}">
+                        <image mode="aspectFill" src="{{item.ad_pic}}"></image>
+                    </navigator>
+                    <view url="../goods/goods?id={{item.ad_goods}}" wx:else>
+                        <image mode="aspectFill" src="{{item.ad_pic}}"></image>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="coupon" wx:if="{{goods_coupon.length}}">
+        <view class="title">
+            <image mode="aspectFit" src="../../assets/images/index-coupon-title.png"></image>
+            <navigator class="more" url="../coupon/coupon">
+                <image mode="widthFix" src="../../assets/images/index-more.png"></image>
+            </navigator>
+        </view>
+        <view class="coupon-item">
+            <view bindtap="receive_coupon" class="item" data-id="{{item.coupon_id}}" wx:for="{{goods_coupon}}">
+                <view class="item-money">
+                    <text class="money-code">￥</text>
+                    <text class="money-amount">{{item.coupon_rule[1]}}</text>
+                </view>
+                <view class="item-tips">
+                    <block wx:if="{{item.as_goods_one&&item.coupon_rule[0]<=0}}">
+                        <view class="tips-t">{{item.coupon_model}}</view>
+                        <text class="tips-c">{{item.as_coupon_desc}}</text>
+                    </block>
+                    <block wx:elif="{{item.coupon_goods!='all'&&item.coupon_rule[0]<=0}}">
+                        <view class="tips-t">{{item.coupon_model}}</view>
+                        <text class="tips-c">{{item.as_coupon_desc}}</text>
+                    </block>
+                    <block wx:else>
+                        <view class="tips-t">{{item.as_coupon_desc}}</view>
+                        <text class="tips-c">满{{item.coupon_rule[0]}}使用</text>
+                    </block>
+                </view>
+                <view class="item-btn">
+                    <view class="btn">
+                        <text>限量
+领取</text>
+                        <view class="btn-icon"></view>
+                    </view>
+                    <text>有效期至{{item.as_coupon_end_time}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="recommend">
+        <view class="title">
+            <image mode="aspectFit" src="../../assets/images/index-remai-title.png"></image>
+        </view>
+        <view class="goods-item">
+            <view class="item" wx:if="{{item.goods}}" wx:for="{{ads.recommend}}">
+                <navigator url="../goods/goods?id={{item.ad_goods}}">
+                    <image bindtap="bind_zhuge_baokuan" data-zhuge="{{item.goods.goods_name}}" mode="widthFix" src="{{item.ad_pic}}"></image>
+                </navigator>
+                <view class="item-title">{{item.goods.goods_name}}</view>
+                <view class="item-describe">{{item.goods.goods_alias}}</view>
+                <view class="item-money" wx:if="{{item.goods.as_price>0}}">￥{{item.goods.as_price}}<text>￥{{item.goods.goods_price}}</text>
+                </view>
+                <view class="item-money" wx:else>￥{{item.goods.goods_price}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="new_goods">
+        <view class="goods-item" wx:for="{{goods_recommend}}">
+            <navigator url="../goods/goods?id={{item.goods_id}}">
+                <image mode="widthFix" src="{{item.goods_pic}}"></image>
+            </navigator>
+            <view class="item-title">{{item.goods_name}}</view>
+            <view class="item-money" wx:if="{{item.as_price>0}}">￥{{item.as_price}}<text>￥{{item.goods_price}}</text>
+            </view>
+            <view class="item-money" wx:else>￥{{item.goods_price}}</view>
+        </view>
+    </view>
+    <view class="goods-load">
+        <view class="load-line"></view>
+        <view class="load-text">更多内容，敬请期待</view>
+    </view>
+    <view class="popup_ad" wx:if="{{ads.popup.length&&is_popup_ad}}">
+        <view class="ad_body" wx:for="{{ads.popup}}">
+            <view bindtap="popup_close" class="ad_close">
+                <image mode="widthFix" src="../../assets/images/btn-close.png"></image>
+            </view>
+            <button bindgetuserinfo="bindGetUserInfo" class="popup_btn" data-path="{{item.as_path}}" openType="getUserInfo" type="warn"></button>
+            <image mode="widthFix" src="{{item.ad_pic}}"></image>
+        </view>
+    </view>
+</view>

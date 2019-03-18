@@ -1,0 +1,117 @@
+page {
+    background-color: #f4f4f4;
+}
+
+.page-section {
+    width: 100%;
+}
+
+.section-item {
+    margin-top: 20rpx;
+}
+
+.section-item .item-head {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    color: #999;
+    padding: 0 30rpx;
+}
+
+.section-item .item-info {
+    padding: 30rpx;
+    font-size: 28rpx;
+    color: #333;
+    background-color: #fff;
+}
+
+.section-item .item-info {
+    font-size: 28rpx;
+    color: #666;
+}
+
+.section-item .item-info .info-text {
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.section-item .item-info text {
+    font-size: 28rpx;
+    color: #333;
+    display: inline-block;
+    width: 140rpx;
+}
+
+.section-item .item-info text.money {
+    font-size: 32rpx;
+    color: #f41c24;
+}
+
+.section-item .info-state {
+    padding-top: 50rpx;
+}
+
+.section-item .item-info .state-item {
+    width: 100%;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.section-item .item-info .state-item-box {
+    width: 100%;
+    padding-left: 50rpx;
+    box-sizing: border-box;
+    border-left: 1px solid #fad1d4;
+}
+
+.section-item .item-info .state-icon {
+    position: absolute;
+    left: 10rpx;
+    top: 0;
+    width: 30rpx;
+    height: 30rpx;
+    border: 6rpx solid #f0f0ef;
+    border-radius: 50%;
+    background-color: #c7c7c7;
+    color: #fff;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 18rpx;
+}
+
+.section-item .item-info .state-content {
+    width: 100%;
+    padding-bottom: 40rpx;
+}
+
+.section-item .item-info .con-text {
+    font-size: 28rpx;
+    color: #333;
+    margin-bottom: 10rpx;
+}
+
+.section-item .item-info .con-text text {
+    float: right;
+    width: 300rpx;
+    text-align: right;
+    color: #666;
+}
+
+.section-item .item-info .con-time {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.section-item .item-info .checked {
+}
+
+.section-item .item-info .checked .state-icon {
+    top: 2rpx;
+    background-color: #e70012;
+    border: 6rpx solid #fad1d4;
+}
+
+.section-item .item-info .checked .state-content {
+    padding-top: 0px;
+}

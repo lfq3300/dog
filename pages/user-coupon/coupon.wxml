@@ -1,0 +1,47 @@
+<view class="container">
+    <view class="coupon-tab">
+        <view bindtap="onCouponTab" class="{{item.cls}}" data-id="{{index}}" wx:for="{{tabs}}">
+            <text>{{item.tab}}</text>
+        </view>
+    </view>
+    <view class="coupon">
+        <view class="coupon-code">
+            <form bindsubmit="submit_code">
+                <input bindinput="inputWacth" name="code" placeholder="请输入优惠码" type="text"></input>
+                <button class="{{submit_style}}" formType="submit">立即兑换</button>
+            </form>
+        </view>
+        <view class="coupon-item">
+            <view bindtap="goto_goods" class="item {{tab_coupons_style}}" data-path="{{item.as_goods_path}}" wx:for="{{tab_coupons}}">
+                <view class="item-money">
+                    <text class="money-code">￥</text>
+                    <text class="money-amount">{{item.coupon_rule[1]}}</text>
+                </view>
+                <view class="item-tips">
+                    <block wx:if="{{item.as_goods_one&&item.coupon_rule[0]<=0}}">
+                        <view class="tips-t">{{item.coupon_model}}</view>
+                        <text class="tips-c">{{item.as_coupon_desc}}</text>
+                    </block>
+                    <block wx:elif="{{item.coupon_goods!='all'&&item.coupon_rule[0]<=0}}">
+                        <view class="tips-t">{{item.coupon_model}}</view>
+                        <text class="tips-c">{{item.as_coupon_desc}}</text>
+                    </block>
+                    <block wx:else>
+                        <view class="tips-t">{{item.as_coupon_desc}}</view>
+                        <text class="tips-c">满{{item.coupon_rule[0]}}使用</text>
+                    </block>
+                </view>
+                <view class="item-btn">
+                    <view class="btn">
+                        <text>{{item.text}}</text>
+                    </view>
+                    <text>有效期至{{item.as_coupon_end_time}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="goods-load">
+            <view class="load-line"></view>
+            <view class="load-text">更多内容，敬请期待</view>
+        </view>
+    </view>
+</view>

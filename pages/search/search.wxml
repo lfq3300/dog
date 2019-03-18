@@ -1,0 +1,42 @@
+<view class="container">
+    <form bindsubmit="formBindsubmit">
+        <view class="search">
+            <view class="search-box">
+                <icon color="#999" size="14" type="search"></icon>
+                <input focus="true" name="keyword" placeholder="搜索喜欢的商品" placeholderClass="phcolor"></input>
+            </view>
+            <view class="search-submit">
+                <button formType="submit">搜索</button>
+            </view>
+        </view>
+    </form>
+    <view class="search-hot" wx:if="{{!key}}">
+        <view class="hot-title">
+            <image mode="aspectFit" src="../../assets/images/search-icon-hot.png"></image>
+      热门搜索
+    </view>
+        <view class="hot-item">
+            <navigator url="../goods/goods?id={{item.label_goods}}" wx:for="{{result_data}}">{{item.label_name}}</navigator>
+        </view>
+    </view>
+    <view class="search-goods" wx:else>
+        <view class="goods-ul" wx:if="{{result_goods.length}}">
+            <view class="goods-item" wx:for="{{result_goods}}">
+                <navigator url="../goods/goods?id={{item.goods_id}}">
+                    <image mode="widthFix" src="{{item.goods_pic}}"></image>
+                </navigator>
+                <view class="item-title">{{item.goods_name}}</view>
+                <view class="item-money" wx:if="{{item.as_price>0}}">￥{{item.as_price}}<text>￥{{item.goods_price}}</text>
+                </view>
+                <view class="item-money" wx:else>￥{{item.goods_price}}</view>
+            </view>
+        </view>
+        <view class="goods-load" wx:if="{{result_goods.length}}">
+            <view class="load-line"></view>
+            <view class="load-text">更多内容，敬请期待</view>
+        </view>
+        <view class="page-nodata" wx:if="{{!result_goods.length}}">
+            <text>亲，没有搜索到相关内容哦~</text>
+        </view>
+    </view>
+</view>

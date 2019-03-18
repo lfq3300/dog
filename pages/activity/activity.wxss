@@ -1,0 +1,272 @@
+page {
+    background-color: #f4f4f4;
+}
+
+image {
+    display: block;
+}
+
+.page-head {
+    width: 100%;
+    background-color: #fff;
+}
+
+.page-head .banner {
+    width: 100%;
+    position: relative;
+}
+
+.page-head .banner image {
+    width: 100%;
+}
+
+.page-head .timer {
+    width: 100%;
+    padding: 35rpx 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: 26rpx;
+    color: #333;
+}
+
+.page-head .timer .title {
+    width: 100%;
+}
+
+.page-head .timer .time {
+    text-align: right;
+    width: 100%;
+}
+
+.page-head .timer .time text {
+    background-color: #464553;
+    color: #fff;
+    font-size: 22rpx;
+    border-radius: 6rpx;
+    padding: 0rpx 8rpx;
+}
+
+.theme {
+    width: 100%;
+}
+
+.theme .hot-goods {
+    width: 100%;
+    padding: 0rpx 0rpx 0rpx 20rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.theme .hot-goods swiper {
+    width: 100%;
+    height: 380rpx;
+    padding-bottom: 20rpx;
+}
+
+.theme .hot-goods swiper swiper-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.theme .hot-goods swiper .goods-item {
+    width: 224rpx;
+    margin-right: 20rpx;
+}
+
+.theme .hot-goods swiper .goods-item image {
+    width: 100%;
+}
+
+.theme .hot-goods swiper .goods-item .item-name {
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    color: #333;
+}
+
+.theme .hot-goods swiper .goods-item .item-price {
+    font-size: 26rpx;
+    color: #f41c24;
+}
+
+.theme .hot-goods swiper .goods-item .item-price text {
+    font-size: 20rpx;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.theme .ads {
+    width: 100%;
+    padding: 10rpx 20rpx 30rpx 20rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 30rpx 0rpx;
+}
+
+.theme .ads navigator {
+    margin-top: 20rpx;
+}
+
+.theme .ads image {
+    width: 100%;
+}
+
+.theme .list-goods {
+    background-color: #fff;
+    overflow: hidden;
+    padding: 30rpx 0rpx 10rpx 20rpx;
+}
+
+.theme .list-goods .goods-item {
+    width: 50%;
+    float: left;
+    padding-right: 20rpx;
+    box-sizing: border-box;
+    padding-bottom: 20rpx;
+}
+
+.theme .list-goods .goods-item image {
+    width: 100%;
+    margin-bottom: 20rpx;
+}
+
+.theme .list-goods .goods-item .item-footer {
+    height: 115rpx;
+    overflow: hidden;
+}
+
+.theme .list-goods .goods-item .item-label {
+    overflow: hidden;
+    padding-bottom: 6rpx;
+}
+
+.theme .list-goods .goods-item .item-label text {
+    background-color: #f41c24;
+    color: #fff;
+    font-size: 20rpx;
+    padding: 2rpx 8rpx;
+    margin-right: 10rpx;
+    border-radius: 6rpx;
+    display: block;
+    float: left;
+}
+
+.theme .list-goods .goods-item .item-name {
+    font-size: 26rpx;
+    color: #333;
+}
+
+.theme .list-goods .goods-item .item-price {
+    font-size: 32rpx;
+    color: #f41c24;
+}
+
+.theme .list-goods-2 {
+    overflow: hidden;
+}
+
+.theme .list-goods-2 .goods-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20rpx;
+    background-color: #fff;
+    padding: 30rpx;
+}
+
+.theme .list-goods-2 .goods-item .item-pic {
+    width: 250rpx;
+    margin-right: 20rpx;
+}
+
+.theme .list-goods-2 .goods-item .item-pic image {
+    width: 100%;
+}
+
+.theme .list-goods-2 .goods-item .item-right {
+    padding-right: 20rpx;
+    padding-top: 10rpx;
+    position: relative;
+}
+
+.theme .list-goods-2 .goods-item .item-right .item-name {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.theme .list-goods-2 .goods-item .item-right .item-name text {
+    font-size: 24rpx;
+    color: #999;
+    display: block;
+    margin-top: 6rpx;
+}
+
+.theme .list-goods-2 .goods-item .item-right .item-price {
+    margin-top: 10rpx;
+    font-size: 32rpx;
+    color: #f41c24;
+}
+
+.theme .list-goods-2 .goods-item .item-right .item-price1 {
+    font-size: 26rpx;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.theme .list-goods-2 .goods-item .item-right .item-btn {
+    background-color: #f41c24;
+    font-size: 26rpx;
+    padding: 15rpx 30rpx;
+    border-radius: 8rpx;
+    display: inline-block;
+    position: absolute;
+    right: 0rpx;
+    bottom: 20rpx;
+    color: #fff;
+}
+
+.theme .list-goods-2 .goods-item .item-label {
+    overflow: hidden;
+    padding-bottom: 10rpx;
+    padding-top: 10rpx;
+}
+
+.theme .list-goods-2 .goods-item .item-label text {
+    background-color: #fff4ec;
+    color: #ef2b2b;
+    font-size: 22rpx;
+    padding: 2rpx 8rpx;
+    margin-right: 10rpx;
+    border-radius: 6rpx;
+    display: block;
+    float: left;
+}
+
+.goods-load {
+    width: 100%;
+    padding-bottom: 30rpx;
+    margin-top: 30rpx;
+    position: relative;
+    text-align: center;
+    height: 60rpx;
+}
+
+.goods-load .load-line {
+    width: 60%;
+    margin: auto;
+    height: 30rpx;
+    border-bottom: 1px solid #dddddd;
+}
+
+.goods-load .load-text {
+    color: #999;
+    font-size: 24rpx;
+    line-height: 60rpx;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 0;
+    padding: 0 20rpx;
+    transform: translateX(-50%);
+    left: 50%;
+}

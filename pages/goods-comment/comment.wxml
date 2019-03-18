@@ -1,0 +1,26 @@
+<view class="container">
+    <view class="comment" wx:if="{{result_data.length}}">
+        <view class="item" wx:for="{{result_data}}" wx:for-index="comment_index">
+            <view class="item-left">
+                <image mode="widthFix" src="{{item.comment_user.user_headimg}}"></image>
+            </view>
+            <view class="item-right">
+                <view class="name">{{item.comment_user.user_nickname}}</view>
+                <view class="content">
+          {{item.comment_content}}
+        </view>
+                <view class="pics" wx:if="{{item.comment_pic.length}}">
+                    <image bindtap="imageplus" data-id="{{comment_index}}" data-url="{{itemComment}}" mode="aspectFill" src="{{itemComment}}" wx:for="{{item.comment_pic_array}}" wx:for-item="itemComment"></image>
+                </view>
+                <view class="time">{{item.comment_time}}</view>
+                <view class="reply" wx:if="{{item.comment_reply}}">
+                    <text>官方回复：</text> {{item.comment_reply}}
+        </view>
+            </view>
+        </view>
+    </view>
+    <view class="page-nodata" wx:else>
+        <image mode="widthFix" src="../../assets/images/nodata-icon.png"></image>
+        <text>亲，还没有相关评论哦~</text>
+    </view>
+</view>

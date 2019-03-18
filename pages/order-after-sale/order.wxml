@@ -1,0 +1,43 @@
+<view class="container">
+    <view class="page-line"></view>
+    <view class="page-section">
+        <view class="section-item">
+            <view class="item-head">
+        退/换货信息
+      </view>
+            <view class="item-info">
+                <view class="info-text">
+                    <text>售后单号</text>{{result_data.or_no}}
+        </view>
+                <view class="info-text">
+                    <text>申请类型</text>{{result_data.or_type}}
+        </view>
+                <view class="info-text">
+                    <text>申请时间</text>{{result_data.or_time}}
+        </view>
+                <view class="info-text">
+                    <text>退款金额</text>
+                    <text class="money">￥{{result_data.total_fee}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="section-item">
+            <view class="item-head">
+        退/换货流程
+      </view>
+            <view class="item-info info-state">
+                <view class="state-item {{item.style}}" wx:for="{{result_data.return_state}}">
+                    <view class="state-item-box">
+                        <view class="state-icon">{{index+1}}</view>
+                        <view class="state-content">
+                            <view class="con-text">{{item.name}}
+                <text>{{item.time}}</text>
+                            </view>
+                            <view class="con-time">{{item.desc}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

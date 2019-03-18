@@ -1,0 +1,158 @@
+<view class="container" wx:if="{{result_data}}">
+    <view class="head">
+        <swiper autoplay="true" circular="true" indicatorActiveColor="#f41c24" indicatorColor="#cacad0" indicatorDots="true">
+            <swiper-item wx:for="{{result_data.goods_pic_array}}">
+                <image class="slide-image" src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+        <view class="head-timer" wx:if="{{as_time>0}}">
+            <view class="title">￥{{result_data.as_price}}<text>￥{{result_data.goods_price}}</text>
+            </view>
+            <view class="time">
+        距结束
+        <text>{{end_h}}</text> :
+        <text>{{end_i}}</text> :
+        <text>{{end_s}}</text>
+            </view>
+        </view>
+        <view class="head-info">
+            <view class="info-title">{{result_data.goods_name}}</view>
+            <view class="info-describe">{{result_data.goods_description}}</view>
+            <view class="info-money" wx:if="{{as_time<=0}}">￥{{result_data.goods_price}}</view>
+        </view>
+    </view>
+    <view class="comment" hidden="true">
+        <navigator url="../goods-comment/comment?id={{result_data.goods_id}}">
+            <text>用户评论</text>
+            <view class="icon"></view>
+        </navigator>
+    </view>
+    <view class="promotion">
+        <view bindtap="coupon_show" class="coupon">
+            <view class="name">领券</view>
+            <view class="item">
+                <text wx:for="{{result_coupon}}">满{{item.coupon_rule[0]}}减{{item.coupon_rule[1]}}</text>
+            </view>
+            <view class="icon"></view>
+        </view>
+        <view bindtap="viewDiscount" class="discount" wx:if="{{result_promotion.length}}">
+            <view class="name">优惠</view>
+            <view class="item">
+                <text wx:for="{{result_promotion}}">{{item.promotion_name}}</text>
+            </view>
+            <view class="icon icon-rate90" wx:if="{{isDiscount}}"></view>
+            <view class="icon" wx:else></view>
+        </view>
+        <view class="discount-describe" wx:if="{{isDiscount}}">
+            <view class="name"></view>
+            <view class="item">
+                <view wx:for="{{result_promotion}}">
+                    <text>{{item.promotion_name}}</text> {{item.promotion_describe}}
+        </view>
+            </view>
+        </view>
+    </view>
+    <view class="quantity">
+        <view class="name">数量</view>
+        <view class="item">
+            <view bindtap="quantity_reduce" class="item-jian">
+                <text class="icon1"></text>
+            </view>
+            <view class="item-input">
+                <input bindblur="quantity_input" value="{{goods_quantity}}"></input>
+            </view>
+            <view bindtap="quantity_plus" class="item-jia">
+                <text class="icon1"></text>
+                <text class="icon2"></text>
+            </view>
+        </view>
+    </view>
+    <view class="goods-details">
+        <view class="details-nav">
+            <block wx:if="{{isGoods_tab=='details'}}">
+                <view bindtap="tabDisplay" class="tab-cur" data-id="details">商品详情</view>
+                <view bindtap="tabDisplay" data-id="parameter" wx:if="{{1==2}}">参数规格</view>
+            </block>
+            <block wx:if="{{isGoods_tab=='parameter'}}">
+                <view bindtap="tabDisplay" data-id="details">商品详情</view>
+                <view bindtap="tabDisplay" class="tab-cur" data-id="parameter" wx:if="{{1==2}}">参数规格</view>
+            </block>
+        </view>
+        <view class="details" wx:if="{{isGoods_tab=='details'}}">
+            <image mode="widthFix" src="{{item}}" wx:for="{{result_data.goods_content_array}}"></image>
+        </view>
+        <view class="parameter" wx:if="{{isGoods_tab=='parameter'}}">
+            <view class="parm-item" wx:for="{{result_data.tps}}">
+                <view class="item-title">{{item.title}}</view>
+                <view class="item-body">
+                    <view class="item" wx:for="{{item.list}}" wx:for-item="itemView">
+                        <text class="name">{{itemView.name}}</text>
+                        <text class="value">{{itemView.content}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="goods-footer">
+        <navigator class="service" openType="switchTab" url="../index/index">
+            <image mode="aspectFit" src="../../assets/images/goods-icon-home.png"></image>
+            <text class="color_red">首页</text>
+        </navigator>
+        <view bindtap="bind_zhuge_service" class="service">
+            <button openType="contact"></button>
+            <image mode="aspectFit" src="../../assets/images/goods-icon-service1.png"></image>
+            <text>客服</text>
+        </view>
+        <navigator class="cart" openType="switchTab" url="../cart/cart">
+            <image mode="aspectFit" src="../../assets/images/goods-icon-cart1.png"></image>
+            <text>购物车</text>
+        </navigator>
+        <view bindtap="goods_cart" class="cart-add" wx:if="{{result_data.goods_stock>0}}">加入购物车</view>
+        <button bindgetuserinfo="goods_buy" class="shopping" openType="getUserInfo" type="warn" wx:if="{{result_data.goods_stock>0}}">立即购买</button>
+        <view class="no-stock" wx:if="{{result_data.goods_stock<=0}}">商品已售馨</view>
+    </view>
+    <view class="fixed-coupon" wx:if="{{is_coupon_show}}">
+        <view animation="{{coupon_anim_bg}}" bindtap="coupon_hide" class="coupon-bg"></view>
+        <view animation="{{coupon_anim}}" class="coupon-body">
+            <view class="coupon-title">
+                <icon bindtap="coupon_hide" color="#333" size="22" type="cancel"></icon>
+        领券
+      </view>
+            <scroll-view class="coupon-item" scrollY="true">
+                <view class="no-data" wx:if="{{!result_coupon.length}}">
+          没有可用优惠券
+        </view>
+                <block wx:else>
+                    <view bindtap="receive_coupon" class="item" data-id="{{item.coupon_id}}" wx:for="{{result_coupon}}">
+                        <view class="item-money">
+                            <text class="money-code">￥</text>
+                            <text class="money-amount">{{item.coupon_rule[1]}}</text>
+                        </view>
+                        <view class="item-tips">
+                            <block wx:if="{{item.as_goods_one&&item.coupon_rule[0]<=0}}">
+                                <view class="tips-t">{{item.coupon_model}}</view>
+                                <text class="tips-c">{{item.as_coupon_desc}}</text>
+                            </block>
+                            <block wx:elif="{{item.coupon_goods!='all'&&item.coupon_rule[0]<=0}}">
+                                <view class="tips-t">{{item.coupon_model}}</view>
+                                <text class="tips-c">{{item.as_coupon_desc}}</text>
+                            </block>
+                            <block wx:else>
+                                <view class="tips-t">{{item.as_coupon_desc}}</view>
+                                <text class="tips-c">满{{item.coupon_rule[0]}}使用</text>
+                            </block>
+                        </view>
+                        <view class="item-btn">
+                            <view class="btn">
+                                <text>限量
+领取</text>
+                                <view class="btn-icon"></view>
+                            </view>
+                            <text>有效期至{{item.as_coupon_end_time}}</text>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+</view>

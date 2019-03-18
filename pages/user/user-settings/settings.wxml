@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="settings-head">
+        <image backgroundSize="cover" class="logo" src="../../../assets/images/logo.png"></image>
+    </view>
+    <view class="section-group">
+        <view class="group-item bottom-line">
+            <navigator class="item-title" url="about/about">
+                <text>关于商城</text>
+                <view class="icon"></view>
+            </navigator>
+        </view>
+        <view class="group-item bottom-line">
+            <view class="item-title">
+                <button openType="contact"></button>
+                <text>联系客服</text>
+                <view class="icon"></view>
+            </view>
+        </view>
+    </view>
+</view>

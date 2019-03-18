@@ -1,0 +1,58 @@
+<view class="container">
+    <view class="page-section scene1" wx:if="{{scene=='sc1'}}">
+        <image class="bg" mode="aspectFill" src="../../../assets/images/old/home-bg.jpg"></image>
+        <view class="btns">
+            <image bindtap="bind_canyu" mode="widthFix" src="../../../assets/images/old/btn-canyu.png"></image>
+            <image bindtap="bind_bucanyu" mode="widthFix" src="../../../assets/images/old/btn-bucanyu.png"></image>
+        </view>
+    </view>
+    <view class="page-section scene2" wx:if="{{scene=='sc2'}}">
+        <image class="bg" mode="aspectFill" src="../../../assets/images/old/bg-1.jpg"></image>
+        <view class="box">
+            <view class="photo">
+                <image mode="widthFix" src="{{tpl}}"></image>
+                <view class="kuang">
+                    <image mode="widthFix" src="../../../assets/images/old/bk.png"></image>
+                </view>
+            </view>
+            <view class="sex" wx:if="{{btn=='b1'}}">
+                <image bindtap="bind_photo" data-sex="1" mode="widthFix" src="../../../assets/images/old/icon-nan.png"></image>
+                <image bindtap="bind_photo" data-sex="2" mode="widthFix" src="../../../assets/images/old/icon-nv.png"></image>
+            </view>
+            <view class="btns" wx:if="{{btn=='b1'}}">
+                <image bindtap="bind_upload" mode="widthFix" src="../../../assets/images/old/btn-photo.png"></image>
+            </view>
+            <view class="btns2" wx:if="{{btn=='b2'}}">
+                <form bindsubmit="formBindsubmit" class="form-input">
+                    <input maxlength="11" name="danmu" placeholder="发个弹幕试试" placeholderClass="phcolor" type="text" value="{{danmu_value}}"></input>
+                    <button class="form-submit" formType="submit">发送</button>
+                </form>
+                <image bindtap="bind_save" mode="widthFix" src="../../../assets/images/old/btn-save.png"></image>
+                <image bindtap="bind_reply" mode="widthFix" src="../../../assets/images/old/btn-reply.png"></image>
+                <text>已生成{{result.number}}张环保青年照</text>
+            </view>
+            <view class="danmu" wx:if="{{btn=='b2'}}">
+                <view animation="{{dm_anim1}}" class="dm dm-1">
+                    <image src="../../../assets/images/old/icon-laba.png"></image>
+                    <view class="dm-text">{{label_text1}}</view>
+                </view>
+                <view animation="{{dm_anim2}}" class="dm dm-2">
+                    <image src="../../../assets/images/old/icon-laba.png"></image>
+                    <view class="dm-text">{{label_text2}}</view>
+                </view>
+                <view animation="{{dm_anim3}}" class="dm dm-3">
+                    <image src="../../../assets/images/old/icon-laba.png"></image>
+                    <view class="dm-text">{{label_text3}}</view>
+                </view>
+                <view animation="{{dm_anim4}}" class="dm dm-4">
+                    <image src="../../../assets/images/old/icon-laba.png"></image>
+                    <view class="dm-text">{{label_text4}}</view>
+                </view>
+                <view animation="{{dm_anim5}}" class="dm dm-5">
+                    <image src="../../../assets/images/old/icon-laba.png"></image>
+                    <view class="dm-text">{{label_text5}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
